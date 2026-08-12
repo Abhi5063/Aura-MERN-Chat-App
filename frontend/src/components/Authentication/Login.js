@@ -75,7 +75,7 @@ const Login = () => {
       <FormControl id="email" isRequired>
         <FormLabel>Email Address</FormLabel>
         <Input
-          value={email}
+          value={email || ""}
           type="email"
           placeholder="Enter Your Email Address"
           onChange={(e) => setEmail(e.target.value)}
@@ -85,7 +85,7 @@ const Login = () => {
         <FormLabel>Password</FormLabel>
         <InputGroup size="md">
           <Input
-            value={password}
+            value={password || ""}
             onChange={(e) => setPassword(e.target.value)}
             type={show ? "text" : "password"}
             placeholder="Enter password"
@@ -108,7 +108,7 @@ const Login = () => {
       </Button>
       <Button
         className="glass-button"
-        style={{ background: 'linear-gradient(90deg, #f43f5e 0%, #be123c 100%)' }}
+        style={{ background: '#334155', color: '#f8fafc' }}
         width="100%"
         onClick={() => {
           setEmail("guest@example.com");

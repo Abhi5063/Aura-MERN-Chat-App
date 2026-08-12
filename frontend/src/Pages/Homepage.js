@@ -32,15 +32,15 @@ function Homepage() {
         m="40px 0 15px 0"
         className="glass"
       >
-        <Text fontSize="4xl" fontFamily="Inter" fontWeight="bold" bgGradient="linear(to-r, #0d9488, #8b5cf6)" bgClip="text">
+        <Text fontSize="4xl" fontFamily="Inter" fontWeight="bold" color="#f8fafc">
           Aura
         </Text>
       </Box>
       <Box w="100%" p={4} className="glass">
-        <Tabs isFitted variant="soft-rounded" colorScheme="teal">
+        <Tabs isFitted variant="soft-rounded" colorScheme="gray">
           <TabList mb="1em">
-            <Tab color="white" _selected={{ color: 'white', bg: 'rgba(13, 148, 136, 0.5)' }}>Login</Tab>
-            <Tab color="white" _selected={{ color: 'white', bg: 'rgba(13, 148, 136, 0.5)' }}>Sign Up</Tab>
+            <Tab color="#94a3b8" _selected={{ color: '#f8fafc', bg: '#334155' }}>Login</Tab>
+            <Tab color="#94a3b8" _selected={{ color: '#f8fafc', bg: '#334155' }}>Sign Up</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
