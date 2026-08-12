@@ -1,54 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, sans-serif;
-  background-color: #0f172a; /* Slate 900 */
-  color: #f8fafc; /* Slate 50 */
+  color: #1e293b;
 }
 
+/* Dynamic Gradient Background */
 .App {
   min-height: 100vh;
   display: flex;
-  background-color: #0f172a;
+  background: linear-gradient(-45deg, #e2e8f0, #cbd5e1, #f1f5f9, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
 }
 
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism Container */
 .glass {
-  background: #1e293b !important; /* Slate 800 */
-  border: 1px solid #334155 !important; /* Slate 700 */
-  border-radius: 8px !important;
-  color: #f8fafc !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 12px !important;
+  color: #0f172a !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
 }
 
+/* Glass Input */
 .glass-input {
-  background: #0f172a !important; /* Slate 900 */
-  border: 1px solid #334155 !important; /* Slate 700 */
-  color: #f8fafc !important;
-  border-radius: 6px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  color: #0f172a !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
 }
+
 .glass-input:focus {
-  background: #0f172a !important;
-  border-color: #64748b !important; /* Slate 500 */
-  box-shadow: 0 0 0 1px #64748b !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: #6366f1 !important; /* Indigo 500 */
+  box-shadow: 0 0 0 1px #6366f1 !important;
 }
+
 .glass-input::placeholder {
   color: #64748b !important;
 }
 
+/* Primary Action Button */
 .glass-button {
-  background: #f8fafc !important; /* Slate 50 */
-  color: #0f172a !important; /* Slate 900 */
-  border: 1px solid #f8fafc !important;
-  border-radius: 6px !important;
-  font-weight: 500 !important;
+  background: #6366f1 !important; /* Indigo 500 */
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
   transition: all 0.2s ease !important;
-  box-shadow: none !important;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4), 0 2px 4px -1px rgba(99, 102, 241, 0.2) !important;
 }
+
 .glass-button:hover {
-  background: #e2e8f0 !important; /* Slate 200 */
-  transform: none !important;
+  background: #4f46e5 !important; /* Indigo 600 */
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 8px -1px rgba(99, 102, 241, 0.5), 0 4px 6px -1px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* Guest Button Specific Styling handled in inline styles in component or add a class */
+.guest-btn {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.3) !important;
+}
+
+.guest-btn:hover {
+  background: #1e293b !important;
 }
 
 ::-webkit-scrollbar {
@@ -56,10 +84,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #cbd5e1;
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #94a3b8;
 }

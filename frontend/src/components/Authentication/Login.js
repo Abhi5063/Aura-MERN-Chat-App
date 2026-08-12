@@ -91,7 +91,7 @@ const Login = () => {
             placeholder="Enter password"
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button h="1.75rem" size="sm" onClick={handleClick} color="black">
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
@@ -138,7 +138,7 @@ const Login = () => {
           });
         }}
       >
-        🌟 Get Guest User Credentials
+        Get Guest User Credentials
       </Button>
     </VStack>
   );
