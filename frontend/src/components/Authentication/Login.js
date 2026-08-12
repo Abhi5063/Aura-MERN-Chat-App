@@ -107,15 +107,38 @@ const Login = () => {
         Login
       </Button>
       <Button
-        className="glass-button"
-        style={{ background: '#334155', color: '#f8fafc' }}
+        className="glass-button guest-btn"
+        style={{ 
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', 
+          color: '#ffffff',
+          fontWeight: 'bold',
+          boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+          transition: 'transform 0.2s'
+        }}
+        _hover={{ transform: 'scale(1.02)' }}
         width="100%"
         onClick={() => {
-          setEmail("guest@example.com");
-          setPassword("123456");
+          const guestUsers = [
+            "guest@example.com",
+            "guest1@example.com",
+            "guest2@example.com",
+            "guest3@example.com",
+            "guest4@example.com",
+            "guest5@example.com"
+          ];
+          const randomGuest = guestUsers[Math.floor(Math.random() * guestUsers.length)];
+          setEmail(randomGuest);
+          setPassword(randomGuest === "guest@example.com" ? "123456" : "password123");
+          toast({
+            title: "Guest Selected: " + randomGuest,
+            status: "info",
+            duration: 2000,
+            isClosable: true,
+            position: "bottom",
+          });
         }}
       >
-        Get Guest User Credentials
+        🌟 Get Guest User Credentials
       </Button>
     </VStack>
   );
