@@ -1,6 +1,8 @@
 # Aura (Modern Chat App)
 
-A full-stack MERN Chat Application featuring a modern, minimalist glassmorphism UI with a vibrant 4-color gradient theme. 
+🚀 **Live Demo:** [https://aura-tx60.onrender.com](https://aura-tx60.onrender.com)
+
+A full-stack MERN Chat Application featuring a modern, minimalist glassmorphism UI with a vibrant 4-color gradient theme.
 
 ## Features
 - **Modern UI/UX**: Designed using color theory, featuring a dynamic 4-color gradient background (Slate, Deep Blue, Indigo, Teal), and stunning glassmorphism components.
